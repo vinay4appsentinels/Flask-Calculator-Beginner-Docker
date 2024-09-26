@@ -10,6 +10,11 @@ pipeline {
         }
       }
     }
+    stage('Docker Build') {
+      steps {
+        sh 'docker build -t my-image .'
+      }
+    }
 
     stage('Test') {
       steps {
